@@ -1,7 +1,7 @@
 export type PolicySection = {
-  title: string;
-  body?: string[];
-  list?: string[];
+    title: string;
+    body?: string[];
+    list?: string[];
 };
 
 export const lastUpdated = "November 7, 2026";
