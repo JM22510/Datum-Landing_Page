@@ -1,7 +1,10 @@
+import type { ReactNode } from "react";
+import EmailLink from "../components/email/emaillink";
+
 export type PolicySection = {
     title: string;
-    body?: string[];
-    list?: string[];
+    body?: ReactNode[];
+    list?: ReactNode[];
 };
 
 export const lastUpdated = "November 7, 2026";
@@ -120,7 +123,15 @@ export const sections: PolicySection[] = [
     {
         title: "11. How to Reach Us",
         body: [
-        "For questions about this policy, to exercise your rights, or to withdraw consent, contact our Data Protection Officer at [DPO email] or visit the cooperative office in Murallon, Boac, Marinduque.",
+        <>
+            For questions about this policy, to exercise your rights, or to
+            withdraw consent, contact our Data Protection Officer at{" "}
+            <EmailLink
+                email="luzondatum2026@gmail.com"
+                className="font-semibold text-blue-600 underline hover:text-blue-800"
+            />{" "}
+            or visit the cooperative office in Murallon, Boac, Marinduque.
+        </>,
         ],
     },
 ];
