@@ -3,10 +3,9 @@ import type { MouseEvent } from "react";
 import { navlinks } from "../../data/navlink";
 import Reveal from "../reveal/reveal";
 import BrandLogo from "../brandlogo/brandlogo";
-import EmailLink from "../email/emaillink";
 
 const EMAIL = "luzondatum2026@gmail.com";
-
+const GMAIL_WEB = `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}`;
 
 export default function Footer() {
     const year = new Date().getFullYear();
@@ -16,6 +15,21 @@ export default function Footer() {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     };
 
+    const handleEmailClick = (e: MouseEvent<HTMLAnchorElement>) => {
+        const ua = navigator.userAgent;
+
+        if (/Android/i.test(ua)) {
+            e.preventDefault();
+            window.location.href =
+                `intent:mailto:${EMAIL}#Intent;` +
+                `action=android.intent.action.SENDTO;` +
+                `package=com.google.android.gm;` +
+                `S.browser_fallback_url=${encodeURIComponent(GMAIL_WEB)};end`;
+        } else if (/iPhone|iPad|iPod/i.test(ua)) {
+            e.preventDefault();
+            window.location.href = `googlegmail:///co?to=${EMAIL}`;
+        }
+    };
 
     return (
         <footer className="bg-[#0d274f] text-[#c4bbb9]">
@@ -37,9 +51,15 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col gap-2 leading-relaxed shrink-0">
                         <p className="font-bold">Contact</p>
-                        <EmailLink
-                            email={EMAIL}
-                        />
+                        <a
+                            href={GMAIL_WEB}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={handleEmailClick}
+                            className="font-semibold hover:text-[#FFFFFF] cursor-pointer"
+                        >
+                            {EMAIL}
+                        </a>
                     </div>
                 </div>
 
