@@ -44,7 +44,7 @@ export default function Home() {
 
                 <Reveal delay={300} className="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
                     <a
-                        href="https://github.com/JM22510/Datum-Landing_Page/releases/download/v1.0.0/Datum.1.apk"
+                        href="https://github.com/JM22510/Datum-Landing_Page/releases/download/v1.0.0/Datum.apk"
                         download
                         className="flex items-center gap-3 bg-linear-to-b from-[#2C7DA0] to-[#183765] px-5 py-3 rounded-2xl border-2 border-white/60 text-white font-semibold transition-transform hover:scale-105"
                     >
