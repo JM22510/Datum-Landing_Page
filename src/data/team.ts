@@ -21,7 +21,7 @@ export const TEAM: TeamMember[] = [
         id: 2,
         img: member2,
         name: "Carl Venus Labay",
-        role: "Researcher & Quality Assurance Lead",
+        role: "Researcher &  QA Specialist",
     },
     {
         id: 3,
