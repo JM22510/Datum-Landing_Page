@@ -4,6 +4,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import BrandLogo from "../brandlogo/brandlogo";
 import { sections, lastUpdated } from "../../data/privacypolicy";
 import Reveal from "../reveal/reveal";
+import LinkifiedText from "../linkemail/linkemail";
 
 export default function PrivacyPolicy() {
     const [scrolled, setScrolled] = useState(false);
@@ -87,14 +88,16 @@ export default function PrivacyPolicy() {
 
                                 {section.body?.map((paragraph) => (
                                     <p key={paragraph} className="text-gray-700 text-base leading-relaxed">
-                                        {paragraph}
+                                        <LinkifiedText text={paragraph} />
                                     </p>
                                 ))}
 
                                 {section.list && (
                                     <ul className="list-disc pl-6 flex flex-col gap-2 text-gray-700 text-base leading-relaxed">
                                         {section.list.map((item) => (
-                                            <li key={item}>{item}</li>
+                                            <li key={item}>
+                                                <LinkifiedText text={item} />
+                                            </li>
                                         ))}
                                     </ul>
                                 )}
