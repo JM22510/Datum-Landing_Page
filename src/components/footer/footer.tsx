@@ -6,7 +6,7 @@ import BrandLogo from "../brandlogo/brandlogo";
 import EmailLink from "../email/emaillink";
 
 const EMAIL = "luzondatum2026@gmail.com";
-const GMAIL_WEB = `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}`;
+
 
 export default function Footer() {
     const year = new Date().getFullYear();
