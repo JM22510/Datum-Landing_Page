@@ -120,7 +120,7 @@ export const sections: PolicySection[] = [
     {
         title: "11. How to Reach Us",
         body: [
-        "For questions about this policy, to exercise your rights, or to withdraw consent, contact DATUM at luzondatum2026@gmail.com or visit the cooperative office in Murallon, Boac, Marinduque.",
+        "For questions about this policy, to exercise your rights, or to withdraw consent, contact DATUM at luzondatum2013@gmail.com or visit the cooperative office in Murallon, Boac, Marinduque.",
         ],
     },
 ];

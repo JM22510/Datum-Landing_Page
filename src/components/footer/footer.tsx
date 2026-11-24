@@ -4,7 +4,7 @@ import { navlinks } from "../../data/navlink";
 import Reveal from "../reveal/reveal";
 import BrandLogo from "../brandlogo/brandlogo";
 
-const EMAIL = "luzondatum2026@gmail.com";
+const EMAIL = "luzondatum2013@gmail.com";
 const GMAIL_WEB = `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}`;
 
 export default function Footer() {
