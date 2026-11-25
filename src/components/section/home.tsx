@@ -1,13 +1,13 @@
 import phone from "../../assets/datumphoneui.png";
 import phone2 from "../../assets/DatumUI2.png";
-import { FaAndroid, FaArrowRight } from "react-icons/fa";
+import { FaAndroid, FaArrowRight, FaChevronDown } from "react-icons/fa";
 import Reveal from "../reveal/reveal";
 
 export default function Home() {
     return (
         <section
             id="home"
-            className="relative isolate lg:min-h-screen flex flex-col lg:flex-row lg:justify-between justify-center items-center gap-5 px-4 md:px-12 lg:px-24 pt-28 pb-16 lg:pt-20 lg:pb-20 overflow-hidden"
+            className="relative isolate min-h-screen flex flex-col lg:flex-row lg:justify-between justify-center items-center gap-5 px-4 md:px-12 lg:px-24 pt-28 pb-28 lg:pt-20 lg:pb-20 overflow-hidden"
             style={{
                 backgroundColor: "#051D41",
                 backgroundImage:
@@ -63,7 +63,7 @@ export default function Home() {
             </div>
 
             {/* Phone mockups */}
-            <Reveal delay={200} className="relative w-full max-w-5xl h-90 sm:h-128 lg:h-175 flex items-center justify-center">
+            <Reveal delay={200} className="relative w-full max-w-5xl h-72 sm:h-128 lg:h-175 flex items-center justify-center">
                 <img
                     src={phone2}
                     alt=""
@@ -75,6 +75,15 @@ export default function Home() {
                     className="absolute w-100 sm:w-96 lg:w-3xl translate-x-10 lg:translate-x-12 -translate-y-4 drop-shadow-2xl z-10"
                 />
             </Reveal>
+
+            {/* Scroll indicator */}
+            <a
+                href="#about"
+                aria-label="Scroll down to learn more"
+                className="flex absolute bottom-6 lg:bottom-8 left-1/2 -translate-x-1/2 z-20 items-center justify-center w-11 h-11 lg:w-14 lg:h-14 rounded-full bg-white/20 border-2 border-white text-white shadow-[0_0_20px_rgba(255,255,255,0.35)] backdrop-blur-sm hover:bg-white/35 transition-colors animate-bounce motion-reduce:animate-none"
+            >
+                <FaChevronDown className="w-5 h-5 lg:w-6 lg:h-6" />
+            </a>
         </section>
     );
 }
